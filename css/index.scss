@@ -1,6 +1,8 @@
 /*      definition sass      */
 $bla:#000;
 $whi:#fff;
+$col-a:#5b201e;
+$col-h:#5f120f;
 
 @mixin whb($width,$height,$bg){
 	width: $width;
@@ -153,6 +155,312 @@ html,body{
 			&:hover a{
 				color: #5b201e;
 			}
+		}
+	}
+}
+/*     product     start     */
+.product {
+	.aside {
+		width: 210px;
+		padding-bottom: 6px;
+		overflow: hidden;
+		background: url(../images/productBgShade.png) no-repeat left 2px,url(../images/productBg.png);
+		.tit {
+			@include mg(10px,none,4px,12px);
+			color: $whi;
+			>span {
+				line-height: 10px;
+				font-size: 44px;
+				font-family: "SimSun";
+			}
+			>div {
+				h5 {
+					margin-top: 10px;
+					margin-left: 4px;
+					line-height: 0px;
+					font-weight: normal;
+					font-family: "Microsoft YaHei";
+					font-size: 16px;
+				}
+				span {
+					font-size: 14px;
+				}
+			}
+		}
+		.pub-product-menu {
+			width: 198px;
+			margin-left: 6px;
+			background: #fff1d4;
+			overflow: hidden;
+			h4 {
+				@include mg(13px,none,4px,11px);
+				width: 176px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				background: url(../images/titleBg.png) no-repeat;
+				font-size: 14px;
+				font-weight: normal;
+				color: #5b0906;
+			}
+			>ul {
+				margin-left: 11px;
+				width: 176px;
+				h6 {
+					position: relative;
+					padding-left: 16px;
+					line-height: 30px;
+					font-weight: normal;
+					font-size: 12px;
+					font-family: "SimSun";
+					cursor: pointer;
+					&:before {
+						position: absolute;
+						left: 5px;
+						top: 11px;
+						width: 3px;
+						height: 5px;
+						content: "";
+						background: url(../images/subMenuImg.png) no-repeat;
+					}
+				}
+				ul {
+					display: none;
+					margin-left: 16px;
+					a {
+						color: #000;
+						font-family: "SimSun";
+					}
+				}
+				>li:hover {
+					ul{
+						display: block;
+					}
+				}
+				>li:hover {
+					h6:before{
+						top: 13px;
+						width: 5px;
+						height: 3px;
+						background: url(../images/subMenuImgA.png) no-repeat;
+					}
+				}
+				a:hover {
+					color: #702f2b;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.centent {
+		.list {
+			margin-top: 12px;
+			width: 770px;
+			min-height: 1000px;
+			ul {
+				margin-left: -20px;
+			}
+			li {
+				float: left;
+				margin-left: 20px;
+				width: 242px;
+				text-align: center;
+				img {
+					padding: 5px;
+					background: #fff;
+					&:hover {
+						background: $col-a;
+						transition: 400ms;
+					}
+				}
+				a+a {
+					line-height: 56px;
+					font-size: 12px;
+					color: #000;
+					&:hover {
+						color: $col-a;
+					}
+				}	
+			}
+		}
+	}
+}
+/*    tit public  css   */
+.public-tit {
+	width: 770px;
+	height: 31px;
+	border-bottom: 1px solid #5b0906;
+	div {
+		border-bottom: 3px solid #5b0906;
+		height: 32px;
+		span {
+		float: left;
+		@include mg(6px,12px,none,3px);
+		width: 14px;
+		height: 14px;
+		background: #5b0906;
+		}
+		h4 {
+			float: left;
+			margin-top: 5px;
+			font-size: 14px;
+			font-family: "SimSun";
+			color: #5b0906;
+		}
+	}
+	a {
+		@include mg(11px,8px,none,none);
+		color: #5c5a5a;
+	}
+	a:hover {
+		color: #5f120f;
+	}
+}
+
+/*       cooperation  start      */
+.cooperation {
+	width: 100%;
+	height: 364px;
+	background: url(../images/cooperationShade.png) no-repeat,url(../images/cooperationBg.png) repeat-x;
+	.cooperation-icon {
+		padding-top: 8px;
+		padding-bottom: 16px;
+		text-align: center;
+	}
+	.cooperation-list {
+		li {
+			float: left;
+			margin-left: 7px;
+			margin-bottom: 7px;
+		}
+	}
+}
+
+/*       successfulcase start    */
+.suc-case {
+	margin-bottom: 20px;
+	.suc-case-tit {
+		height: 45px;
+		margin-bottom: 14px;
+		border-bottom: 1px solid #6f1d1a;
+		.tit {
+			border-bottom: 3px  solid #6f1d1a;
+			>span {
+				line-height: 46px;
+				font-size: 46px;
+				font-family: "Didot";
+				color: #74221f;
+			}
+			>div {
+				h5 {
+					margin-top: 16px;
+					line-height: 4px;
+					font-size: 14px;
+					font-family: "SimSun";
+					font-weight: normal;
+					color: #bla;
+				}
+				span {
+					font-size: 12px;
+					font-family: "Didot";
+				}
+			}
+		}
+		a {
+			float: right;
+			@include mg(24px,8px,none,none);
+			font-size: 12px;
+			color: #535353;
+			&:hover {
+				color: $col-h;
+			}
+		}
+	}
+	.case-list {
+		margin-left: -9px;
+		li {
+			float: left;
+			margin-left: 9px;
+			width: 243px;
+			height: 215px;
+			text-align: center;
+			img {
+				padding: 5px;
+				background: $whi;
+				&:hover {
+					background: $col-a;
+					transition: 400ms;
+				}
+			}
+			a+a {
+				display: block;
+				margin-top: 10px;
+				color: $bla;
+				&:hover {
+					color: $col-a;
+				}
+			}
+		}
+	}
+}
+/*     question      */
+.question {
+	padding-bottom: 50px;
+	border-top: 1px solid #6f1d1a;
+	.strip {
+		margin-bottom: 8px;
+		span {
+			float: left;
+			width: 49px;
+			height: 3px;
+			background: #6f1d1a;
+		}
+		i {
+			float: right;
+			width: 49px;
+			height: 3px;
+			background: #6f1d1a;
+		}
+	}
+	.question-txt {
+		margin-top: 18px;
+		margin-right: 54px;
+		h4 {
+			font-size: 30px;
+			color: #6f1d1a;
+			margin-bottom: 18px;
+		}
+		p {
+			margin-top: 20px;
+			margin-left: 28px;
+			font-size: 20px;
+			font-family: "Microsoft YaHei";
+		}
+	}
+}
+/*       select      */
+.select {
+	width: 100%;
+	height: 160px;
+	padding-top: 4px;
+	background: url(../images/selectBg.png) repeat-x,url(../images/selectBgShade.png) center bottom no-repeat;
+	color: $whi;
+	.content {
+		>div {
+			margin: 0 auto;
+			width: 880px;
+		}
+		h3 {
+			font-size: 46px;
+		}
+		.translate {
+			font-size: 18px;
+			font-family: "Didot";
+		}
+		.contact-way {
+			margin-top: 6px;
+			border-top: 1px solid $whi;
+			border-bottom: 1px solid $whi;
 		}
 	}
 }
